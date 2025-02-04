@@ -60,9 +60,7 @@ public class EmployeeController {
 
 		String administratorName = (String) session.getAttribute("administratorName");
         if (administratorName != null) {
-            model.addAttribute("administratorName", administratorName);
-        } else {
-            model.addAttribute("administratorName", "未ログイン");
+           // model.addAttribute("administratorName", administratorName);
         }
 
         return "employee/list";
