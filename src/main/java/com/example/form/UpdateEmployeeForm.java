@@ -7,7 +7,6 @@ import java.sql.Date;
 import com.example.validation.UniqueEmail;
 
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -25,14 +24,14 @@ public class UpdateEmployeeForm {
 	@NotEmpty(message = "選択してください")
 	private String gender;
 	@NotEmpty(message = "入力してくださ")
-	private Date hire_Date;
+	private Date hireDate;
 	@Size(max=50,message = "メールは50文字以内で入力してください")
 	@Email(message = "メール型で入力してください")
 	@NotEmpty(message = "必ず入力してください")
 	@UniqueEmail
-	private String mail_address;
+	private String mailaddress;
 	@Pattern(regexp = "^\\d{3}\\-?\\d{4}$",message = "郵便番号の方で入力してください")
-	private String zip_code;
+	private String zipcode;
 
 	public String getName() {
 		return name;
@@ -50,28 +49,28 @@ public class UpdateEmployeeForm {
 		this.gender = gender;
 	}
 
-	public Date getHire_Date() {
-		return hire_Date;
+	public Date getHireDate() {
+		return hireDate;
 	}
 
-	public void setHire_Date(Date hire_Date) {
-		this.hire_Date = hire_Date;
+	public void setHireDate(Date hireDate) {
+		this.hireDate = hireDate;
 	}
 
-	public String getMail_address() {
-		return mail_address;
+	public String getMailaddress() {
+		return mailaddress;
 	}
 
-	public void setMail_address(String mail_address) {
-		this.mail_address = mail_address;
+	public void setMailaddress(String mailaddress) {
+		this.mailaddress = mailaddress;
 	}
 
-	public String getZip_code() {
-		return zip_code;
+	public String getZipcode() {
+		return zipcode;
 	}
 
-	public void setZip_code(String zip_code) {
-		this.zip_code = zip_code;
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
 	}
 
 	public String getAddress() {
@@ -156,8 +155,8 @@ public class UpdateEmployeeForm {
 
 	@Override
 	public String toString() {
-		return "UpdateEmployeeForm [name=" + name + ", gender=" + gender + ", hire_Date=" + hire_Date
-				+ ", mail_address=" + mail_address + ", zip_code=" + zip_code + ", address=" + address + ", telephone="
+		return "UpdateEmployeeForm [name=" + name + ", gender=" + gender + ", hire_Date=" + hireDate
+				+ ", mailaddress=" + mailaddress + ", zipcode=" + zipcode + ", address=" + address + ", telephone="
 				+ telephone + ", salary=" + salary + ", characteristics=" + characteristics + ", id=" + id
 				+ ", dependentsCount=" + dependentsCount + "]";
 	}

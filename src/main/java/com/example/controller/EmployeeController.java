@@ -107,14 +107,13 @@ public class EmployeeController {
 		Employee employee = new Employee();
 		employee.setId(form.getIntId());
 		employee.setGender(form.getGender());
-		employee.setHireDate(form.getHire_Date());
-		employee.setMailAddress(form.getMail_address());
-		employee.setZipCode(form.getZip_code());
+		employee.setHireDate(form.getHireDate());
+		employee.setMailAddress(form.getMailaddress());
+		employee.setZipCode(form.getZipcode());
 		employee.setAddress(form.getAddress());
 		employee.setTelephone(form.getTelephone());
 		employee.setSalary(form.getSalary());
 		employee.setCharacteristics(form.getCharacteristics());
-
 		employee.setDependentsCount(form.getIntDependentsCount());
 		employeeService.update(employee);
 		return "redirect:/employee/showList";

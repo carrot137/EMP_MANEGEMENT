@@ -168,7 +168,7 @@
                       <input
                         type="hidden"
                         name="id"
-                        th:value="${employee.gender}"
+                        th:value="${employee.id}"
                       />
                       <input
                         type="text"
@@ -185,7 +185,7 @@
                     <th nowrap>入社日</th>
                     <td>
                       <label
-                        th:errors="*{hire_Date}"
+                        th:errors="*{hireDate}"
                         class="error-messages"
                       >
                       日付を入力してください
@@ -193,21 +193,21 @@
                       <label
                         class="control-label"
                         style="color: red"
-                        for="hire_Date"
+                        for="hireDate"
                       ></label>
                       <input
                         type="hidden"
                         name="id"
-                        th:value="${employee.hire_Date}"
+                        th:value="${employee.id}"
                       />
                       <input
                         type="text"
-                        name="hire_Date"
+                        name="hireDate"
                         id="hire_Date"
                         class="form-control"
                         value="YYYY-MM-DD"
                         th:errorclass="error-input"
-                        th:value="${employee.hire_Date}"
+                        th:value="${employee.hireDate}"
                       />
                     </td>
                   </tr>
@@ -215,7 +215,7 @@
                     <th nowrap>メールアドレス</th>
                     <td>
                       <label
-                        th:errors="*{mail_address}"
+                        th:errors="*{mailaddress}"
                         class="error-messages"
                       >
                       メールアドレスを入力してください
@@ -223,21 +223,21 @@
                       <label
                         class="control-label"
                         style="color: red"
-                        for="mail_address"
+                        for="mailaddress"
                       ></label>
                       <input
                         type="hidden"
                         name="id"
-                        th:value="${employee.mail_address}"
+                        th:value="${employee.id}"
                       />
                       <input
                         type="text"
-                        name="mail_address"
-                        id="mail_address"
+                        name="mailaddress"
+                        id="mailaddress"
                         class="form-control"
                         value="xxxx@xxxxx"
                         th:errorclass="error-input"
-                        th:value="${employee.mail_address}"
+                        th:value="${employee.mailaddress}"
                       />
                     </td>
                   </tr>
@@ -245,7 +245,7 @@
                     <th nowrap>郵便番号</th>
                     <td>
                       <label
-                        th:errors="*{zip_code}"
+                        th:errors="*{zipcode}"
                         class="error-messages"
                       >
                       郵便番号を入力してください
@@ -253,21 +253,21 @@
                       <label
                         class="control-label"
                         style="color: red"
-                        for="zip_code"
+                        for="zipcode"
                       ></label>
                       <input
                         type="hidden"
                         name="id"
-                        th:value="${employee.zip_code}"
+                        th:value="${employee.id}"
                       />
                       <input
                         type="text"
-                        name="zip_code"
-                        id="zip_code"
+                        name="zipcode"
+                        id="zipcode"
                         class="form-control"
                         value="xxx-xxxx"
                         th:errorclass="error-input"
-                        th:value="${employee.zip_code}"
+                        th:value="${employee.zipcode}"
                       />
                     </td>
                   </tr>
@@ -288,7 +288,7 @@
                       <input
                         type="hidden"
                         name="id"
-                        th:value="${employee.address}"
+                        th:value="${employee.id}"
                       />
                       <input
                         type="text"
@@ -318,7 +318,7 @@
                       <input
                         type="hidden"
                         name="id"
-                        th:value="${employee.telephone}"
+                        th:value="${employee.id}"
                       />
                       <input
                         type="text"
@@ -348,7 +348,7 @@
                       <input
                         type="hidden"
                         name="id"
-                        th:value="${employee.salary}"
+                        th:value="${employee.id}"
                       />
                       <input
                         type="text"
@@ -377,7 +377,7 @@
                     <input
                       type="hidden"
                       name="id"
-                      th:value="${employee.characteristics}"
+                      th:value="${employee.id}"
                     />
                     <input
                       type="text"
