@@ -1,5 +1,11 @@
 package com.example.form;
 
+
+
+
+
+import com.example.validation.UniqueEmail;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -22,10 +28,11 @@ public class InsertAdministratorForm {
 	@Size(min=1,max=100,message = "メールは１００文字以内で入力してください")
 	@Email(message = "メール型で入力してください")
 	@NotEmpty(message = "必ず入力してください")
+	@UniqueEmail
 	private String mailAddress;
 	/** パスワード */
 	@NotEmpty(message = "必ず入力してください")
-	@Size(min=8,max=20,message="8文字以上２０文字以下で入力してください")
+	@Size(min=8,max=20,message="8文字以上20文字以下で入力してください")
 	@Pattern(regexp = "英大文字、小文字、数字をそれぞれ少なくとも1文字は使用")
 	private String password;
 
