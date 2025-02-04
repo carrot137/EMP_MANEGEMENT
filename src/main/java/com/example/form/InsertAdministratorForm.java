@@ -33,7 +33,7 @@ public class InsertAdministratorForm {
 	/** パスワード */
 	@NotEmpty(message = "必ず入力してください")
 	@Size(min=8,max=20,message="8文字以上20文字以下で入力してください")
-	@Pattern(regexp = "英大文字、小文字、数字をそれぞれ少なくとも1文字は使用")
+	@Pattern(regexp="^(?=.*[A-Z])[a-zA-Z0-9_]{8,24}+$",message = "英大文字、小文字、数字をそれぞれ少なくとも1文字は使用")
 	private String password;
 
 	public String getName() {
