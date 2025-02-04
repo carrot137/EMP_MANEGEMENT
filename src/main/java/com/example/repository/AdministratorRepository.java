@@ -93,6 +93,8 @@ public class AdministratorRepository {
 			return null;
 		}
 		return administratorList.get(0);
-	}
+		
 
+	}
+	
 }
