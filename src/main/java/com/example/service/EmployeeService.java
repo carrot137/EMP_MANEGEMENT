@@ -31,6 +31,13 @@ public class EmployeeService {
 		List<Employee> employeeList = employeeRepository.findAll();
 		return employeeList;
 	}
+	 public List<Employee> findAll() {
+        return employeeRepository.findAll();
+    }
+
+    public List<Employee> findByName(String name) {
+        return employeeRepository.findByNameContainingIgnoreCase(name);
+    }
 
 	/**
 	 * 従業員情報を取得します.
@@ -39,7 +46,7 @@ public class EmployeeService {
 	 * @return 従業員情報
 	 * @throws org.springframework.dao.DataAccessException 検索されない場合は例外が発生します
 	 */
-	public Employee showDetail(Integer id) {
+	public Employee showDetail(int id) {
 		Employee employee = employeeRepository.load(id);
 		return employee;
 	}
@@ -53,8 +60,4 @@ public class EmployeeService {
 		employeeRepository.update(employee);
 	}
 
-    public List<Employee> findByNameContaining(String name) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findByNameContaining'");
-    }
 }

@@ -98,7 +98,11 @@
             <!-- ここから上を編集する必要はありません -->
 
             <!-- ここにモックのform要素を貼り付けます -->
-
+            <form th:action="@{/employee/search}" method="get">
+              <input type="text" name="keyword" placeholder="名前を入力" />
+              <button type="submit">検索</button>
+            </form>
+          </table>
             <form
               method="post"
               action="list.html"
